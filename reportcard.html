@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+body
+            {
+               background-image: url('report.png');
+            }
+
+h1 {text-align: center;}
+</style>
+<script type = "text/javascript">
+    function calc()
+    {
+        var m1,m2,m3,avg = 0,total = 0, result = "",grade = "";
+        m1 = parseInt(document.form1.wp.value);
+        m2 = parseInt(document.form1.daa.value);
+        m3 = parseInt(document.form1.cd.value);
+        total = m1+m2+m3;
+        avg = total/3;
+        if( m1 < 35 || m2 < 35 || m3 < 35)
+        {
+            result = "fail";
+            grade = "D";
+        }
+        else if(avg >= 90)
+        {
+            result = "Outstanding";
+            grade = "O[S]";
+        }
+        else if(avg >= 85 && avg < 90)
+        {
+            result = "Excellent";
+            grade = "A+";
+        }
+        else if(avg >= 80 && avg < 85)
+        {
+            result = "Very Good";
+            grade = "A";
+        }
+        else if(avg >=70 && avg < 80)
+        {
+            result = "Good";
+            grade = "B+";
+        }
+        else if(avg >=60 && avg < 70)
+        {
+            result = "Above Average";
+            grade = "B";
+        }
+        else if(avg >=50 && avg < 60)
+        {
+            result = "Average";
+            grade = "C";
+        }
+        else if(avg >=45 && avg < 50)
+        {
+            result = "Pass";
+            grade = "P";
+        }
+        else  if (avg < 45)
+        {
+            result = "Fail";
+            Grade = "F";
+        }
+        document.form1.result.value = result;
+        document.form1.grade.value = grade;
+        document.form1.total.value = total;
+        document.form1.average.value = avg;
+       
+    }
+   
+</script>
+</head>
+<body>
+    
+    <h1 style="color:rgb(10, 10, 10);">Report Card</h1>
+    <form name = "form1">
+        <table class="center" border = "1">
+            <tr>
+                <td> Student Name</td>
+                <td><input type = "text"  /></td>
+            </tr>
+
+            <tr>
+                <td> Class</td>
+                <td><input type = "text"  /></td>
+            </tr>
+
+            <tr>
+                <td> Semester</td>
+                <td><input type = "text"  /></td>
+            </tr>
+
+
+            <tr>
+                <td> Admission No</td>
+                <td><input type = "text"  /></td>
+            </tr>
+
+            <tr>
+                <td> Department</td>
+                <td><input type = "text"  /></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td colspan = "2" align = "center">Subject Marks</td>
+            </tr>
+            <tr>
+                <td>Web Programming</td>
+                <td><input type = "text" name = "wp" /></td>
+            </tr>
+            <tr>
+                <td>CD</td>
+                <td><input type = "text" name = "cd" /></td>
+            </tr>
+            <tr>
+                <td>DAA</td>
+                <td><input type = "text" name = "daa" /></td>
+
+            </tr>
+            <tr>
+                <td colspan = "2" align = "center"><input type = "button"   onclick = "calc()" value = "Calculate" /></td>
+            </tr>           
+            <tr>
+                <td>Total</td>
+                <td><input type = "text" name = "total"/></td>
+
+            </tr>
+            <tr>
+                <td>Average</td>
+                <td><input type = "text" name = "average" /></td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td><input type = "text" name = "result" /></td>
+            </tr>
+            <tr>
+                <td>Grade</td>
+                <td><input type = "text" name = "grade"/></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
