@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ans1.xsl" ?>
+<employee>
+  <emp>
+    <name> Tom </name>
+    <branch> CSE</branch>
+    <id>12</id>
+    <designation>Associate Professor</designation>
+  </emp>
+  
+  <emp>
+     <name> Rahul</name>
+     <branch> Civil</branch>
+     <id>77</id>
+     <designation>  Professor </designation>
+  </emp>
+  
+  <emp>
+     <name> Sangeeth </name>
+     <branch> CSE</branch>
+     <id>43</id>
+     <designation> Assistant Professor </designation>
+  </emp>
+</employee>
